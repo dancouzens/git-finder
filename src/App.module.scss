@@ -1,0 +1,9 @@
+@mixin display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container {
+    @include display();
+}
