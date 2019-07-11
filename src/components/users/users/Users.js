@@ -1,6 +1,6 @@
 import React from "react";
 import UserItem from "./UserItem";
-import Spinner from "../layout/Spinner";
+import Spinner from "../../layout/Spinner";
 import style from "./User.module.css";
 import PropTypes from "prop-types";
 

@@ -1,0 +1,45 @@
+@import "../../../App.module.scss";
+
+@mixin button {
+    color: #fff;
+    width: 100%;
+    height: 42px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    text-indent: 0px;
+    cursor: pointer;
+}
+
+.msg {
+    display: inline-block;
+    font: 100 11px system-ui;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    bottom: 2px;
+}
+
+.Form {
+    @include display();
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+
+    input {
+        height: 40px;
+        width: 100%;
+        border: none;
+        border: 1px solid #ccc;
+        text-indent: 15px;
+    }
+
+    .ButtonOne {
+        @include button();
+        background-color: rgb(37, 37, 37);
+    }
+}
+
+.ButtonTwo {
+    @include button();
+    background-color: rgb(176, 176, 176);
+}
