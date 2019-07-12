@@ -1,0 +1,66 @@
+.User {
+    width: 100%;
+
+    p,
+    a,
+    strong,
+    li {
+        font-size: 14px;
+        list-style: none;
+    }
+
+    a {
+        padding: 10px;
+        background-color: #252525;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 160px;
+        margin: 20px 0;
+    }
+
+    .Back {
+        background-color: rgb(224, 223, 223);
+        color: rgb(82, 82, 82);
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 10px;
+        margin: 20px 20px 20px 0;
+        display: inline-block;
+    }
+
+    #Success {
+        color: green;
+    }
+
+    #Failure {
+        color: red;
+    }
+
+    .Card {
+        border: 1px solid rgb(224, 223, 223);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 30% 70%;
+
+        .InnerCardOne {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            color: rgb(82, 82, 82);
+
+            .Image {
+                width: 150px;
+                border-radius: 100%;
+                margin: 20px;
+            }
+        }
+
+        .InnerCardTwo {
+            padding: 20px;
+        }
+    }
+}
