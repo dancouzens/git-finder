@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Spinner from "../../layout/Spinner";
+import Repos from "../../repos/Repos";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import style from "./User.module.css";
@@ -7,12 +8,15 @@ import style from "./User.module.css";
 class User extends Component {
   componentDidMount() {
     this.props.getUser(this.props.match.params.login);
+    this.props.getUserRepos(this.props.match.params.login);
   }
 
   static propTypes = {
     loading: PropTypes.bool,
     user: PropTypes.object.isRequired,
-    getUser: PropTypes.func.isRequired
+    repos: PropTypes.array.isRequired,
+    getUser: PropTypes.func.isRequired,
+    getUserRepos: PropTypes.func.isRequired
   };
   render() {
     const {
@@ -31,20 +35,25 @@ class User extends Component {
       hireable
     } = this.props.user;
 
-    const { loading } = this.props;
+    const { loading, repos } = this.props;
 
     if (loading) return <Spinner />;
 
     const {
       Back,
       Failure,
+      Red,
+      Green,
       Success,
       User,
       Card,
+      SubCard,
       Image,
       InnerCardOne,
       InnerCardTwo,
-      Html
+      Html,
+      Badge,
+      Admin
     } = style;
 
     return (
@@ -103,6 +112,15 @@ class User extends Component {
             </ul>
           </div>
         </div>
+        <div className={SubCard}>
+          <div className={`${Badge} ${Red}`}>Followers: {followers}</div>
+          <div className={`${Badge} ${Green}`}>Following: {following}</div>
+          <div className={`${Badge} ${Red}`}> Public Repos: {public_repos}</div>
+          <div className={`${Badge} ${Admin}`}>
+            Public Gists: {public_gists}
+          </div>
+        </div>
+        <Repos repos={repos} />
       </div>
     );
   }

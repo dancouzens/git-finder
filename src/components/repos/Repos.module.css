@@ -1,0 +1,19 @@
+.Card {
+  border: 1px solid #e0dfdf;
+  margin: 0 auto 20px;
+}
+
+.Card h3 {
+  margin: 20px;
+}
+
+.Card h3 a {
+  padding: 10px;
+  -webkit-transition: 300ms background-color;
+  transition: 300ms background-color;
+}
+
+.Card h3 a:hover {
+  background-color: #c23957;
+}
+/*# sourceMappingURL=Repos.module.css.map */

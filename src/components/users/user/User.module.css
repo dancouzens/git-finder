@@ -17,8 +17,9 @@
   text-align: center;
   text-decoration: none;
   display: block;
-  width: 160px;
+  width: auto;
   margin: 20px 0;
+  border-radius: 5px;
 }
 
 .User .Back {
@@ -31,10 +32,12 @@
   display: inline-block;
 }
 
+.User .Succes,
 .User #Success {
   color: green;
 }
 
+.User .Failure,
 .User #Failure {
   color: red;
 }
@@ -74,5 +77,40 @@
 
 .User .Card .InnerCardTwo {
   padding: 20px;
+}
+
+.User .Card .InnerCardTwo h3 {
+  padding-bottom: 10px;
+}
+
+.User .SubCard {
+  border: 1px solid #e0dfdf;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.User .SubCard .Badge {
+  margin: 20px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.Admin {
+  background-color: #252525;
+}
+
+.Green {
+  background-color: #09a009;
+}
+
+.Red {
+  background-color: #c23957;
 }
 /*# sourceMappingURL=User.module.css.map */

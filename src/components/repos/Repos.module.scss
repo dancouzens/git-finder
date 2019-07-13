@@ -1,0 +1,17 @@
+.Card {
+    border: 1px solid rgb(224, 223, 223);
+    margin: 0 auto 20px;
+
+    h3 {
+        margin: 20px;
+
+        a {
+            padding: 10px;
+            transition: 300ms background-color;
+
+            &:hover {
+                background-color: #c23957;
+            }
+        }
+    }
+}

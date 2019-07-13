@@ -16,8 +16,9 @@
         text-align: center;
         text-decoration: none;
         display: block;
-        width: 160px;
+        width: auto;
         margin: 20px 0;
+        border-radius: 5px;
     }
 
     .Back {
@@ -30,10 +31,12 @@
         display: inline-block;
     }
 
+    .Succes,
     #Success {
         color: green;
     }
 
+    .Failure,
     #Failure {
         color: red;
     }
@@ -52,6 +55,8 @@
             margin-bottom: 20px;
             color: rgb(82, 82, 82);
 
+
+
             .Image {
                 width: 150px;
                 border-radius: 100%;
@@ -61,6 +66,38 @@
 
         .InnerCardTwo {
             padding: 20px;
+
+            h3 {
+                padding-bottom: 10px;
+            }
         }
     }
+
+    .SubCard {
+        border: 1px solid rgb(224, 223, 223);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+
+        .Badge {
+            margin: 20px;
+            padding: 10px;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+    }
+}
+
+.Admin {
+    background-color: #252525;
+}
+
+.Green {
+    background-color: rgb(9, 160, 9)
+}
+
+.Red {
+    background-color: #c23957;
 }
